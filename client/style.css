@@ -1,0 +1,72 @@
+.header {
+    background-color: skyblue;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    grid-area: header;
+}
+
+.footer {
+    background-color: skyblue;
+    color: white;
+    grid-column: span 2;
+    grid-area: footer;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+select {
+padding: 10px 10px;
+font-size: 20px;
+}
+
+/* Main layout format */
+.page-container {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "sidebar content"
+        "sidebar json"
+        "footer footer";
+    grid-template-rows: auto 1fr auto; /* header and footer auto-size, main content takes remaining space */
+    grid-template-columns: 250px 1fr; /* sidebar is 250px wide, content takes the rest */
+}
+.sidebarStyle {
+    grid-area: sidebar;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+.content {
+    grid-area: content;
+    background-color: #e2e2e2;
+    padding: 20px;
+}
+
+.country-info-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+        "country-name country-name"
+        "country-flag country-info";
+}
+.country-name{ grid-area: country-name; text-align: left; }
+.country-flag{ grid-area: country-flag; }
+.country-info{ grid-area: country-info; text-align: left; }
+
+
+.json-output {
+    text-align: left;
+    white-space: pre-wrap;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ddd;
+    grid-area: json;
+    max-width: 1300px;
+}
