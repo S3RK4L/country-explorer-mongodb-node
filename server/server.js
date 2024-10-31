@@ -32,10 +32,11 @@ async function fetchAndCacheCountryData() {
         const countryDocs = countries.map(country => ({
             name: country.name.common,
             region: country.region,
+            population: country.population,
             capital: country.capital && country.capital.length > 0 ? country.capital[0] : "Unknown", // use a string directly
             currencies: country.currencies || {},
             languages: country.languages || {},
-            flagImage: country.flags.svg || '',
+            flagImg: country.flags.png || '',
         }));
 
         await Country.insertMany(countryDocs);

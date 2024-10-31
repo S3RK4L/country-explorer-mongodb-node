@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const countrySchema = new mongoose.Schema({
     name: { type: String, required: true },
     region: { type: String, required: true },
+    population: { type: String, required: true },
     capital: { type: String },
     currencies: {
         type: Map,
@@ -15,7 +16,7 @@ const countrySchema = new mongoose.Schema({
         type: Map,
         of: String
     },
-    flagImage: { type: String, required: true },
+    flagImg: { type: String, required: true },
 });
 
 const Country = mongoose.model('Country', countrySchema);

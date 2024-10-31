@@ -33,14 +33,14 @@ function handleCountrySelection(countryName){
 function createCountryInfoContainer(countryData) 
 {
     var currencies = "";
-    if (countryData.currencies){
+    if (Object.keys(countryData.currencies).length != 0){
         currencies = countryData.currencies[Object.keys(countryData.currencies)[0]].name
     }else{
         currencies = "none found";
     }
 
     var languages = "";
-    if (countryData.languages){
+    if (Object.keys(countryData.languages).length != 0){
         languages = Object.entries(countryData.languages).map(([key, value]) => `${value} (${key})`).join(', ');
     }else{
         languages = "none found";
@@ -49,7 +49,7 @@ function createCountryInfoContainer(countryData)
     return `
       <div class="country-info-container">
         <h3 class="country-name">${countryData.name}</h3>
-        <img class="country-flag" src=${countryData.flag}><img>
+        <img class="country-flag" src=${countryData.flagImg}><img>
         <div class="country-info">
             <div><strong>Currencies:</strong> ${currencies}</div>
             <div><strong>Region:</strong> ${countryData.region}</div>

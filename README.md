@@ -7,5 +7,9 @@ I've kept the country-explorer-basic project to show project progression from no
 
 ###### Skills demonstrated
 - JavaScript
+- Node.js
+- MongoDB
 - RESTful API
 - JSON
+- CSS
+- HTML
