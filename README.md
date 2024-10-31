@@ -1,21 +1,11 @@
-<<<<<<< HEAD
 # country-explorer-mongodb-node
-=======
-# api-calls-js
 
 # Country Explorer
-I've built this small project as I love travelling, and am always trying to figure out what to add to my bucket list. This app allows me to explore different countries.
+This project builds on the country-explorer-basic project by incorporating MongoDB and Node.js to cache API data at server startup, instead of repeated API requests on each page load. This reduces unneccessary overhead, resulting in faster response times.
 
-Features:
-- Countries in the dropdown have now been ordered alphabetically
-- Select any country from the dropdown, and the country's flag and currency is displayed
-
-Ideas:
-- Countries quiz
-- All countries displayed initially with basic info - pagination could be used - select a country to view more information - filters/sort by / search for country
+I've kept the country-explorer-basic project to show project progression from not using MongoDB & Node.js, to using it. It clearly shows the difference in project structure and functionality, and allows for a side-by-side comparison on how this project improves performance and scalability.
 
 ###### Skills demonstrated
 - JavaScript
 - RESTful API
 - JSON
->>>>>>> master
