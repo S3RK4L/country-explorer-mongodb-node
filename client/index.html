@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country Information</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="page-container">
+        <header class="header">
+            <h1>Country Information</h1>
+            <label for ="countriesDropDown">Select country</label>
+            <select name="countriesDropDown" id="countriesDropDown"><option value="All">All</option></select>
+        </header>
+
+        <aside class="sidebarStyle">Sidebar so we can add filters</aside>
+
+        <main id="content" class="content">
+            <div class="country-info-container">
+                <h3 id="countryName" class="country-name"></h3>
+                <img id="countryFlag" class="country-flag"><img>
+                <div class="country-info">
+                    <div id="countryRegion"></div>
+                    <div id="countryCapital"></div>
+                    <div id="countryCurrency"></div>
+                    <div id="countryPopulation"></div>
+                    <div id="countryLanguage"></div>
+                </div>
+            </div>
+        </main>
+
+        <div class="json-output"><pre id="apiOutput"></pre></div>
+
+        <footer class="footer">
+            <p>Footer</p>
+        </footer>
+    </div>
+
+    <script type="module" src="src/app.js"></script>
+
+</body>
+</html>
